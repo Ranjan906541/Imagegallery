@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery | CodeAlpha</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="#" class="logo">📸 Image Gallery</a>
+    <span class="tag">CodeAlpha Internship</span>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">A COLLECTION OF MOMENTS</p>
+      <h1>Explore the <span>Beautiful World</span></h1>
+      <p class="subtitle">
+        Discover beautiful moments through our photo gallery.
+      </p>
+    </section>
+
+    <section class="gallery-section" id="gallery">
+      <div class="filters" aria-label="Filter images">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="nature">Nature</button>
+        <button class="filter-btn" data-filter="cities">Cities</button>
+        <button class="filter-btn" data-filter="animals">Animals</button>
+        <button class="filter-btn" data-filter="travel">Travel</button>
+      </div>
+
+      <div class="gallery-grid" id="galleryGrid"></div>
+
+      <p class="hint">Click any image to view it in full size ✨</p>
+    </section>
+
+    <section class="about">
+      <h2>Moments Worth Remembering</h2>
+      <p>
+        A simple collection of nature, city, travel and wildlife photography.
+        Built with HTML, CSS and JavaScript.
+      </p>
+    </section>
+  </main>
+
+  <!-- Image lightbox -->
+  <div class="lightbox" id="lightbox"
+       role="dialog" aria-modal="true"
+       aria-label="Image preview" aria-hidden="true">
+
+    <button class="close-btn" id="closeBtn"
+            aria-label="Close preview">&times;</button>
+
+    <button class="nav-btn prev-btn" id="prevBtn"
+            aria-label="Previous image">&#10094;</button>
+
+    <div class="preview-content">
+      <img id="previewImage" src="" alt="">
+      <h2 id="previewTitle"></h2>
+      <p id="previewCounter"></p>
+    </div>
+
+    <button class="nav-btn next-btn" id="nextBtn"
+            aria-label="Next image">&#10095;</button>
+  </div>
+
+  <footer>
+    <p>Designed with ❤️ | CodeAlpha Frontend Internship</p>
+  </footer>
+
+</body>
+</html>
